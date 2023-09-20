@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+
+		body{margin: 0; background-image: url(back.jpg); background-size: cover; background-attachment: fixed;}
+			.box{width: 200px; height: auto; position: absolute;}
+	
+	
+
+		
+
+
+	</style>
+</head>
+<body>
+
+
+	<script type="text/javascript">
+		
+	makeBox();
+	function makeBox(){
+		var a = document.createElement("img");
+		a.src = "error.png"
+		a.id = "square";
+		a.className = "box";
+		var b = Math.random() * (window.innerWidth - 200);
+		var c = Math.random() * (window.innerHeight - 200);
+		a.style.left = b + "px";
+		a.style.top = c + "px";
+		a.onclick = function(){
+			a.parentNode.removeChild(a);
+			makeBox();
+		}
+		document.body.appendChild(a);
+	}
+	
+	</script>
+	
+
+
+</body>
+</html>
