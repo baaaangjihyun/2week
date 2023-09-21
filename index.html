@@ -33,10 +33,15 @@
 		a.style.top = c + "px";
 		a.onclick = function(){
 			a.parentNode.removeChild(a);
-			makeBox();
+			makeBox();playShootSound();
 		}
 		document.body.appendChild(a);
 	}
+
+	function playShootSound(){
+			var audio = new Audio('error.mp3');
+			audio.play();
+		}
 	
 	</script>
 	
